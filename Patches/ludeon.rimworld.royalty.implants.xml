@@ -1,0 +1,170 @@
+<Patch>
+
+	<!-- タブの移動 -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>//ResearchProjectDef[defName="BrainWiring"]
+			| //ResearchProjectDef[defName="SpecializedLimbs"]
+			| //ResearchProjectDef[defName="CompactWeaponry"]
+			| //ResearchProjectDef[defName="VenomSynthesis"]
+			| //ResearchProjectDef[defName="ArtificialMetabolism"]
+			| //ResearchProjectDef[defName="NeuralComputation"]
+			| //ResearchProjectDef[defName="SkinHardening"]
+			| //ResearchProjectDef[defName="HealingFactors"]
+			| //ResearchProjectDef[defName="FleshShaping"]
+			| //ResearchProjectDef[defName="MolecularAnalysis"]
+			| //ResearchProjectDef[defName="CircadianInfluence"]
+		</xpath>
+		<value>
+			<tab>ART_ROYALTY</tab>
+		</value>
+	</Operation>
+
+	<!-- 各研究のタブ内における座標修正 -->
+	<!-- memo. core 基準だと Xは1.0,Yは0.7 離す -->
+
+	<!-- インプラント系は3,4行目に -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="BrainWiring"]/researchViewX</xpath>
+		<value>
+			<researchViewX>0.00</researchViewX>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="BrainWiring"]/researchViewY</xpath>
+		<value>
+			<researchViewY>1.40</researchViewY>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="SpecializedLimbs"]/researchViewX</xpath>
+		<value>
+			<researchViewX>1.00</researchViewX>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="SpecializedLimbs"]/researchViewY</xpath>
+		<value>
+			<researchViewY>1.40</researchViewY>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="CompactWeaponry"]/researchViewX</xpath>
+		<value>
+			<researchViewX>2.00</researchViewX>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="CompactWeaponry"]/researchViewY</xpath>
+		<value>
+			<researchViewY>1.40</researchViewY>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="VenomSynthesis"]/researchViewX</xpath>
+		<value>
+			<researchViewX>3.00</researchViewX>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="VenomSynthesis"]/researchViewY</xpath>
+		<value>
+			<researchViewY>1.40</researchViewY>
+		</value>
+	</Operation>
+
+	<!-- 4行目 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="ArtificialMetabolism"]/researchViewX</xpath>
+		<value>
+			<researchViewX>0.00</researchViewX>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="ArtificialMetabolism"]/researchViewY</xpath>
+		<value>
+			<researchViewY>2.10</researchViewY>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="NeuralComputation"]/researchViewX</xpath>
+		<value>
+			<researchViewX>1.00</researchViewX>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="NeuralComputation"]/researchViewY</xpath>
+		<value>
+			<researchViewY>2.10</researchViewY>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="SkinHardening"]/researchViewX</xpath>
+		<value>
+			<researchViewX>2.00</researchViewX>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="SkinHardening"]/researchViewY</xpath>
+		<value>
+			<researchViewY>2.10</researchViewY>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="HealingFactors"]/researchViewX</xpath>
+		<value>
+			<researchViewX>3.00</researchViewX>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="HealingFactors"]/researchViewY</xpath>
+		<value>
+			<researchViewY>2.10</researchViewY>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="FleshShaping"]/researchViewX</xpath>
+		<value>
+			<researchViewX>4.00</researchViewX>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="FleshShaping"]/researchViewY</xpath>
+		<value>
+			<researchViewY>2.10</researchViewY>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="MolecularAnalysis"]/researchViewX</xpath>
+		<value>
+			<researchViewX>5.00</researchViewX>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="MolecularAnalysis"]/researchViewY</xpath>
+		<value>
+			<researchViewY>2.10</researchViewY>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="CircadianInfluence"]/researchViewX</xpath>
+		<value>
+			<researchViewX>6.00</researchViewX>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="CircadianInfluence"]/researchViewY</xpath>
+		<value>
+			<researchViewY>2.10</researchViewY>
+		</value>
+	</Operation>
+
+</Patch>

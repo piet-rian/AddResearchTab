@@ -1,0 +1,56 @@
+<Patch>
+
+	<!-- タブの移動 -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>//ResearchProjectDef[defName="Biosculpting"]
+			| //ResearchProjectDef[defName="Bioregeneration"]
+			| //ResearchProjectDef[defName="NeuralSupercharger"]
+		</xpath>
+		<value>
+			<tab>ART_IDEOLOGY</tab>
+		</value>
+	</Operation>
+
+	<!-- 各研究のタブ内における座標修正 -->
+	<!-- memo. core 基準だと Xは1.0,Yは0.7 離す -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="Biosculpting"]/researchViewX</xpath>
+		<value>
+			<researchViewX>0.00</researchViewX>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="Biosculpting"]/researchViewY</xpath>
+		<value>
+			<researchViewY>0.00</researchViewY>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="Bioregeneration"]/researchViewX</xpath>
+		<value>
+			<researchViewX>1.00</researchViewX>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="Bioregeneration"]/researchViewY</xpath>
+		<value>
+			<researchViewY>0.00</researchViewY>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="NeuralSupercharger"]/researchViewX</xpath>
+		<value>
+			<researchViewX>2.00</researchViewX>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="NeuralSupercharger"]/researchViewY</xpath>
+		<value>
+			<researchViewY>0.00</researchViewY>
+		</value>
+	</Operation>
+
+</Patch>

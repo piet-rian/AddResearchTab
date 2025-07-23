@@ -1,0 +1,85 @@
+<Patch>
+
+	<!-- タブの移動 -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>//ResearchProjectDef[defName="NobleApparel"]
+			| //ResearchProjectDef[defName="RoyalApparel"]
+			| //ResearchProjectDef[defName="CataphractArmor"]
+			| //ResearchProjectDef[defName="JumpPack"]
+			| //ResearchProjectDef[defName="Gunlink"]
+		</xpath>
+		<value>
+			<tab>ART_ROYALTY</tab>
+		</value>
+	</Operation>
+
+	<!-- 各研究のタブ内における座標修正 -->
+	<!-- memo. core 基準だと Xは1.0,Yは0.7 離す -->
+
+	<!-- 衣服系は2行目に -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="NobleApparel"]/researchViewX</xpath>
+		<value>
+			<researchViewX>0.00</researchViewX>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="NobleApparel"]/researchViewY</xpath>
+		<value>
+			<researchViewY>0.70</researchViewY>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="RoyalApparel"]/researchViewX</xpath>
+		<value>
+			<researchViewX>1.00</researchViewX>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="RoyalApparel"]/researchViewY</xpath>
+		<value>
+			<researchViewY>0.70</researchViewY>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="CataphractArmor"]/researchViewX</xpath>
+		<value>
+			<researchViewX>2.00</researchViewX>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="CataphractArmor"]/researchViewY</xpath>
+		<value>
+			<researchViewY>0.70</researchViewY>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="JumpPack"]/researchViewX</xpath>
+		<value>
+			<researchViewX>3.00</researchViewX>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="JumpPack"]/researchViewY</xpath>
+		<value>
+			<researchViewY>0.70</researchViewY>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="Gunlink"]/researchViewX</xpath>
+		<value>
+			<researchViewX>4.00</researchViewX>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="Gunlink"]/researchViewY</xpath>
+		<value>
+			<researchViewY>0.70</researchViewY>
+		</value>
+	</Operation>
+
+</Patch>

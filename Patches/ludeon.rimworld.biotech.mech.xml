@@ -1,0 +1,87 @@
+<Patch>
+
+	<!-- タブの移動 -->
+	<Operation Class="PatchOperationAdd">
+		<!-- メカノイド系は Class="MechtechBase" で大半が一括指定できる -->
+		<xpath>//ResearchProjectDef[defName="BasicMechtech"]
+			| //ResearchProjectDef[defName="StandardMechtech"]
+			| //ResearchProjectDef[defName="HighMechtech"]
+			| //ResearchProjectDef[defName="UltraMechtech"]
+			| //ResearchProjectDef[defName="WastepackAtomizer"]
+		</xpath>
+		<value>
+			<tab>ART_BIOTECH</tab>
+		</value>
+	</Operation>
+
+	<!-- 各研究のタブ内における座標修正 -->
+
+	<!-- memo. core 基準だと Xは1.0,Yは0.7 離す -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="BasicMechtech"]/researchViewX</xpath>
+		<value>
+			<researchViewX>0.00</researchViewX>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="BasicMechtech"]/researchViewY</xpath>
+		<value>
+			<researchViewY>0.00</researchViewY>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="StandardMechtech"]/researchViewX</xpath>
+		<value>
+			<researchViewX>1.00</researchViewX>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="StandardMechtech"]/researchViewY</xpath>
+		<value>
+			<researchViewY>0.00</researchViewY>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="HighMechtech"]/researchViewX</xpath>
+		<value>
+			<researchViewX>2.00</researchViewX>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="HighMechtech"]/researchViewY</xpath>
+		<value>
+			<researchViewY>0.00</researchViewY>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="UltraMechtech"]/researchViewX</xpath>
+		<value>
+			<researchViewX>3.00</researchViewX>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="UltraMechtech"]/researchViewY</xpath>
+		<value>
+			<researchViewY>0.00</researchViewY>
+		</value>
+	</Operation>
+
+	<!-- 有毒発電と同じ行にするために行下げ -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="WastepackAtomizer"]/researchViewX</xpath>
+		<value>
+			<researchViewX>1.00</researchViewX>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="WastepackAtomizer"]/researchViewY</xpath>
+		<value>
+			<researchViewY>0.70</researchViewY>
+		</value>
+	</Operation>
+
+</Patch>

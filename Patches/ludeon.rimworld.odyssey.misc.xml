@@ -1,0 +1,145 @@
+<Patch>
+
+	<!-- タブの移動 -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>//ResearchProjectDef[defName="Fishing"]
+			| //ResearchProjectDef[defName="HeavyBridges"]
+			| //ResearchProjectDef[defName="BeamWeapons"]
+			| //ResearchProjectDef[defName="BasicGravtech"]
+			| //ResearchProjectDef[defName="StandardGravtech"]
+			| //ResearchProjectDef[defName="AdvancedGravtech"]
+			| //ResearchProjectDef[defName="OrbitalTech"]
+			| //ResearchProjectDef[defName="Shuttles"]
+			| //ResearchProjectDef[defName="HunterDrones"]
+		</xpath>
+		<value>
+			<tab>ART_Odyssey</tab>
+		</value>
+	</Operation>
+
+	<!-- 各研究のタブ内における座標修正 -->
+	<!-- memo. core 基準だと Xは1.0,Yは0.7 離す -->
+
+	<!-- 一行目 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="Fishing"]/researchViewX</xpath>
+		<value>
+			<researchViewX>0.00</researchViewX>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="Fishing"]/researchViewY</xpath>
+		<value>
+			<researchViewY>0.00</researchViewY>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="HeavyBridges"]/researchViewX</xpath>
+		<value>
+			<researchViewX>1.00</researchViewX>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="HeavyBridges"]/researchViewY</xpath>
+		<value>
+			<researchViewY>0.00</researchViewY>
+		</value>
+	</Operation>
+
+
+	<!-- 二行目 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="BasicGravtech"]/researchViewX</xpath>
+		<value>
+			<researchViewX>0.00</researchViewX>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="BasicGravtech"]/researchViewY</xpath>
+		<value>
+			<researchViewY>0.70</researchViewY>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="StandardGravtech"]/researchViewX</xpath>
+		<value>
+			<researchViewX>1.00</researchViewX>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="StandardGravtech"]/researchViewY</xpath>
+		<value>
+			<researchViewY>0.70</researchViewY>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="AdvancedGravtech"]/researchViewX</xpath>
+		<value>
+			<researchViewX>2.00</researchViewX>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="AdvancedGravtech"]/researchViewY</xpath>
+		<value>
+			<researchViewY>0.70</researchViewY>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="OrbitalTech"]/researchViewX</xpath>
+		<value>
+			<researchViewX>3.00</researchViewX>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="OrbitalTech"]/researchViewY</xpath>
+		<value>
+			<researchViewY>0.70</researchViewY>
+		</value>
+	</Operation>
+
+
+	<!-- 三行目 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="BeamWeapons"]/researchViewX</xpath>
+		<value>
+			<researchViewX>0.00</researchViewX>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="BeamWeapons"]/researchViewY</xpath>
+		<value>
+			<researchViewY>1.40</researchViewY>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="Shuttles"]/researchViewX</xpath>
+		<value>
+			<researchViewX>1.00</researchViewX>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="Shuttles"]/researchViewY</xpath>
+		<value>
+			<researchViewY>1.40</researchViewY>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="HunterDrones"]/researchViewX</xpath>
+		<value>
+			<researchViewX>2.00</researchViewX>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>//ResearchProjectDef[defName="HunterDrones"]/researchViewY</xpath>
+		<value>
+			<researchViewY>1.40</researchViewY>
+		</value>
+	</Operation>
+
+</Patch>
