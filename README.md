@@ -1,16 +1,15 @@
-# RimworldXMLModTemplate
+# Add Resarch Tab
 
-This is the template repository for XML-based mods in RIMWORLD.
-
-see. <https://rimworldwiki.com/wiki/Modding_Tutorials/Mod_Folder_Structure>
+- DLCで追加された研究項目を「メイン」タブから「(DLC名)」タブに移動するMod
+- アノマリー以外の全てのDLCが導入されていることを前提とした作り、どれか一つでも欠落していると起動時にエラーが出ます。
 
 ## MID-SAVE
 
-途中導入および途中除去についての記述
+途中導入・削除ともに問題ないでしょう。
 
 ## CONFLICT
 
-競合が予想されるmodについての記述
+既存の研究を別タブに移動させるModが他にあるのであれば、それらと競合する可能性があります。
 
 ## NOTICE
 
