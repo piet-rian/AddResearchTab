@@ -13,7 +13,7 @@
 			| //ResearchProjectDef[defName="HunterDrones"]
 		</xpath>
 		<value>
-			<tab>ART_Odyssey</tab>
+			<tab>ART_ODYSSEY</tab>
 		</value>
 	</Operation>
 
