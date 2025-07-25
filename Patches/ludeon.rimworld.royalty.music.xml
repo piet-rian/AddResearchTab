@@ -1,56 +1,91 @@
 <Patch>
 
 	<!-- タブの移動 -->
-	<Operation Class="PatchOperationAdd">
-		<xpath>//ResearchProjectDef[defName="Harp"]
-			| //ResearchProjectDef[defName="Harpsichord"]
-			| //ResearchProjectDef[defName="Piano"]
-		</xpath>
-		<value>
-			<tab>ART_ROYALTY</tab>
-		</value>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Royalty</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>//ResearchProjectDef[defName="Harp"]
+				| //ResearchProjectDef[defName="Harpsichord"]
+				| //ResearchProjectDef[defName="Piano"]
+			</xpath>
+			<value>
+				<tab>ART_ROYALTY</tab>
+			</value>
+		</match>
 	</Operation>
 
 	<!-- 各研究のタブ内における座標修正 -->
 	<!-- memo. core 基準だと Xは1.0,Yは0.7 離す -->
 
-	<Operation Class="PatchOperationReplace">
-		<xpath>//ResearchProjectDef[defName="Harp"]/researchViewX</xpath>
-		<value>
-			<researchViewX>0.00</researchViewX>
-		</value>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Royalty</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>//ResearchProjectDef[defName="Harp"]/researchViewX</xpath>
+			<value>
+				<researchViewX>0.00</researchViewX>
+			</value>
+		</match>
 	</Operation>
-	<Operation Class="PatchOperationReplace">
-		<xpath>//ResearchProjectDef[defName="Harp"]/researchViewY</xpath>
-		<value>
-			<researchViewY>0.00</researchViewY>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationReplace">
-		<xpath>//ResearchProjectDef[defName="Harpsichord"]/researchViewX</xpath>
-		<value>
-			<researchViewX>1.00</researchViewX>
-		</value>
-	</Operation>
-	<Operation Class="PatchOperationReplace">
-		<xpath>//ResearchProjectDef[defName="Harpsichord"]/researchViewY</xpath>
-		<value>
-			<researchViewY>0.00</researchViewY>
-		</value>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Royalty</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>//ResearchProjectDef[defName="Harp"]/researchViewY</xpath>
+			<value>
+				<researchViewY>0.00</researchViewY>
+			</value>
+		</match>
 	</Operation>
 
-	<Operation Class="PatchOperationReplace">
-		<xpath>//ResearchProjectDef[defName="Piano"]/researchViewX</xpath>
-		<value>
-			<researchViewX>2.00</researchViewX>
-		</value>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Royalty</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>//ResearchProjectDef[defName="Harpsichord"]/researchViewX</xpath>
+			<value>
+				<researchViewX>1.00</researchViewX>
+			</value>
+		</match>
 	</Operation>
-	<Operation Class="PatchOperationReplace">
-		<xpath>//ResearchProjectDef[defName="Piano"]/researchViewY</xpath>
-		<value>
-			<researchViewY>0.00</researchViewY>
-		</value>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Royalty</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>//ResearchProjectDef[defName="Harpsichord"]/researchViewY</xpath>
+			<value>
+				<researchViewY>0.00</researchViewY>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Royalty</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>//ResearchProjectDef[defName="Piano"]/researchViewX</xpath>
+			<value>
+				<researchViewX>2.00</researchViewX>
+			</value>
+		</match>
+	</Operation>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Royalty</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>//ResearchProjectDef[defName="Piano"]/researchViewY</xpath>
+			<value>
+				<researchViewY>0.00</researchViewY>
+			</value>
+		</match>
 	</Operation>
 
 </Patch>
