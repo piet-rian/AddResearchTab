@@ -1,145 +1,247 @@
 <Patch>
 
-	<!-- タブの移動 -->
-	<Operation Class="PatchOperationAdd">
-		<xpath>//ResearchProjectDef[defName="Fishing"]
-			| //ResearchProjectDef[defName="HeavyBridges"]
-			| //ResearchProjectDef[defName="BeamWeapons"]
-			| //ResearchProjectDef[defName="BasicGravtech"]
-			| //ResearchProjectDef[defName="StandardGravtech"]
-			| //ResearchProjectDef[defName="AdvancedGravtech"]
-			| //ResearchProjectDef[defName="OrbitalTech"]
-			| //ResearchProjectDef[defName="Shuttles"]
-			| //ResearchProjectDef[defName="HunterDrones"]
-		</xpath>
-		<value>
-			<tab>ART_ODYSSEY</tab>
-		</value>
+	<!--
+		DLCが存在する場合のみ処理するために `PatchOperationFindMod` を用いる
+		`match` は複数回指定不可であるため、処理毎に `PatchOperationFindMod` を用いる
+		`PatchOperationSequence` でもパッチ処理1単位毎にModIdの指定が必要なため、どっちでも大差ない
+	-->
+
+	<!-- タブの移動(メイン→Odyssey) -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Odyssey</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>//ResearchProjectDef[defName="Fishing"]
+				| //ResearchProjectDef[defName="HeavyBridges"]
+				| //ResearchProjectDef[defName="BeamWeapons"]
+				| //ResearchProjectDef[defName="BasicGravtech"]
+				| //ResearchProjectDef[defName="StandardGravtech"]
+				| //ResearchProjectDef[defName="AdvancedGravtech"]
+				| //ResearchProjectDef[defName="OrbitalTech"]
+				| //ResearchProjectDef[defName="Shuttles"]
+				| //ResearchProjectDef[defName="HunterDrones"]
+			</xpath>
+			<value>
+				<tab>ART_ODYSSEY</tab>
+			</value>
+		</match>
 	</Operation>
 
 	<!-- 各研究のタブ内における座標修正 -->
 	<!-- memo. core 基準だと Xは1.0,Yは0.7 離す -->
 
 	<!-- 一行目 -->
-	<Operation Class="PatchOperationReplace">
-		<xpath>//ResearchProjectDef[defName="Fishing"]/researchViewX</xpath>
-		<value>
-			<researchViewX>0.00</researchViewX>
-		</value>
+	<!-- 釣り -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Odyssey</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>//ResearchProjectDef[defName="Fishing"]/researchViewX</xpath>
+			<value>
+				<researchViewX>0.00</researchViewX>
+			</value>
+		</match>
 	</Operation>
-	<Operation Class="PatchOperationReplace">
-		<xpath>//ResearchProjectDef[defName="Fishing"]/researchViewY</xpath>
-		<value>
-			<researchViewY>0.00</researchViewY>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationReplace">
-		<xpath>//ResearchProjectDef[defName="HeavyBridges"]/researchViewX</xpath>
-		<value>
-			<researchViewX>1.00</researchViewX>
-		</value>
-	</Operation>
-	<Operation Class="PatchOperationReplace">
-		<xpath>//ResearchProjectDef[defName="HeavyBridges"]/researchViewY</xpath>
-		<value>
-			<researchViewY>0.00</researchViewY>
-		</value>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Odyssey</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>//ResearchProjectDef[defName="Fishing"]/researchViewX</xpath>
+			<value>
+				<researchViewY>0.00</researchViewY>
+			</value>
+		</match>
 	</Operation>
 
+	<!-- 強化橋 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Odyssey</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>//ResearchProjectDef[defName="HeavyBridges"]/researchViewX</xpath>
+			<value>
+				<researchViewX>1.00</researchViewX>
+			</value>
+		</match>
+	</Operation>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Odyssey</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>//ResearchProjectDef[defName="HeavyBridges"]/researchViewX</xpath>
+			<value>
+				<researchViewY>0.00</researchViewY>
+			</value>
+		</match>
+	</Operation>
 
 	<!-- 二行目 -->
-	<Operation Class="PatchOperationReplace">
-		<xpath>//ResearchProjectDef[defName="BasicGravtech"]/researchViewX</xpath>
-		<value>
-			<researchViewX>0.00</researchViewX>
-		</value>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Odyssey</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>//ResearchProjectDef[defName="BasicGravtech"]/researchViewX</xpath>
+			<value>
+				<researchViewX>0.00</researchViewX>
+			</value>
+		</match>
 	</Operation>
-	<Operation Class="PatchOperationReplace">
-		<xpath>//ResearchProjectDef[defName="BasicGravtech"]/researchViewY</xpath>
-		<value>
-			<researchViewY>0.70</researchViewY>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationReplace">
-		<xpath>//ResearchProjectDef[defName="StandardGravtech"]/researchViewX</xpath>
-		<value>
-			<researchViewX>1.00</researchViewX>
-		</value>
-	</Operation>
-	<Operation Class="PatchOperationReplace">
-		<xpath>//ResearchProjectDef[defName="StandardGravtech"]/researchViewY</xpath>
-		<value>
-			<researchViewY>0.70</researchViewY>
-		</value>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Odyssey</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>//ResearchProjectDef[defName="BasicGravtech"]/researchViewY</xpath>
+			<value>
+				<researchViewY>0.70</researchViewY>
+			</value>
+		</match>
 	</Operation>
 
-	<Operation Class="PatchOperationReplace">
-		<xpath>//ResearchProjectDef[defName="AdvancedGravtech"]/researchViewX</xpath>
-		<value>
-			<researchViewX>2.00</researchViewX>
-		</value>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Odyssey</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>//ResearchProjectDef[defName="StandardGravtech"]/researchViewX</xpath>
+			<value>
+				<researchViewX>1.00</researchViewX>
+			</value>
+		</match>
 	</Operation>
-	<Operation Class="PatchOperationReplace">
-		<xpath>//ResearchProjectDef[defName="AdvancedGravtech"]/researchViewY</xpath>
-		<value>
-			<researchViewY>0.70</researchViewY>
-		</value>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Odyssey</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>//ResearchProjectDef[defName="StandardGravtech"]/researchViewY</xpath>
+			<value>
+				<researchViewY>0.70</researchViewY>
+			</value>
+		</match>
 	</Operation>
 
-	<Operation Class="PatchOperationReplace">
-		<xpath>//ResearchProjectDef[defName="OrbitalTech"]/researchViewX</xpath>
-		<value>
-			<researchViewX>3.00</researchViewX>
-		</value>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Odyssey</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>//ResearchProjectDef[defName="AdvancedGravtech"]/researchViewX</xpath>
+			<value>
+				<researchViewX>2.00</researchViewX>
+			</value>
+		</match>
 	</Operation>
-	<Operation Class="PatchOperationReplace">
-		<xpath>//ResearchProjectDef[defName="OrbitalTech"]/researchViewY</xpath>
-		<value>
-			<researchViewY>0.70</researchViewY>
-		</value>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Odyssey</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>//ResearchProjectDef[defName="AdvancedGravtech"]/researchViewY</xpath>
+			<value>
+				<researchViewY>0.70</researchViewY>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Odyssey</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>//ResearchProjectDef[defName="OrbitalTech"]/researchViewX</xpath>
+			<value>
+				<researchViewX>3.00</researchViewX>
+			</value>
+		</match>
+	</Operation>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Odyssey</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>//ResearchProjectDef[defName="OrbitalTech"]/researchViewY</xpath>
+			<value>
+				<researchViewY>0.70</researchViewY>
+			</value>
+		</match>
 	</Operation>
 
 
 	<!-- 三行目 -->
-	<Operation Class="PatchOperationReplace">
-		<xpath>//ResearchProjectDef[defName="BeamWeapons"]/researchViewX</xpath>
-		<value>
-			<researchViewX>0.00</researchViewX>
-		</value>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Odyssey</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>//ResearchProjectDef[defName="BeamWeapons"]/researchViewX</xpath>
+			<value>
+				<researchViewX>0.00</researchViewX>
+			</value>
+		</match>
 	</Operation>
-	<Operation Class="PatchOperationReplace">
-		<xpath>//ResearchProjectDef[defName="BeamWeapons"]/researchViewY</xpath>
-		<value>
-			<researchViewY>1.40</researchViewY>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationReplace">
-		<xpath>//ResearchProjectDef[defName="Shuttles"]/researchViewX</xpath>
-		<value>
-			<researchViewX>1.00</researchViewX>
-		</value>
-	</Operation>
-	<Operation Class="PatchOperationReplace">
-		<xpath>//ResearchProjectDef[defName="Shuttles"]/researchViewY</xpath>
-		<value>
-			<researchViewY>1.40</researchViewY>
-		</value>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Odyssey</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>//ResearchProjectDef[defName="BeamWeapons"]/researchViewY</xpath>
+			<value>
+				<researchViewY>1.40</researchViewY>
+			</value>
+		</match>
 	</Operation>
 
-	<Operation Class="PatchOperationReplace">
-		<xpath>//ResearchProjectDef[defName="HunterDrones"]/researchViewX</xpath>
-		<value>
-			<researchViewX>2.00</researchViewX>
-		</value>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Odyssey</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>//ResearchProjectDef[defName="Shuttles"]/researchViewX</xpath>
+			<value>
+				<researchViewX>1.00</researchViewX>
+			</value>
+		</match>
 	</Operation>
-	<Operation Class="PatchOperationReplace">
-		<xpath>//ResearchProjectDef[defName="HunterDrones"]/researchViewY</xpath>
-		<value>
-			<researchViewY>1.40</researchViewY>
-		</value>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Odyssey</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>//ResearchProjectDef[defName="Shuttles"]/researchViewY</xpath>
+			<value>
+				<researchViewY>1.40</researchViewY>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Odyssey</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>//ResearchProjectDef[defName="HunterDrones"]/researchViewX</xpath>
+			<value>
+				<researchViewX>2.00</researchViewX>
+			</value>
+		</match>
+	</Operation>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Odyssey</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>//ResearchProjectDef[defName="HunterDrones"]/researchViewY</xpath>
+			<value>
+				<researchViewY>1.40</researchViewY>
+			</value>
+		</match>
 	</Operation>
 
 </Patch>
