@@ -3,28 +3,28 @@
   <!-- To add a research tab, make a new ResearchTabDef here and then set the <tab> field of your
   research project to match it -->
 
-  <ResearchTabDef>
+  <ResearchTabDef MayRequire="Ludeon.RimWorld.Royalty">
     <defName>ART_ROYALTY</defName>
     <label>Royalty</label>
     <generalTitle>Royalty research projects</generalTitle>
     <generalDescription>Some items are subject to completion of the main's research project.</generalDescription>
   </ResearchTabDef>
 
-  <ResearchTabDef>
+  <ResearchTabDef MayRequire="Ludeon.RimWorld.Ideology">
     <defName>ART_IDEOLOGY</defName>
     <label>Ideology</label>
     <generalTitle>Ideology research projects</generalTitle>
     <generalDescription>Some items are subject to completion of the main's research project.</generalDescription>
   </ResearchTabDef>
 
-  <ResearchTabDef>
+  <ResearchTabDef MayRequire="Ludeon.RimWorld.Biotech">
     <defName>ART_BIOTECH</defName>
     <label>Biotech</label>
     <generalTitle>Biotech research projects</generalTitle>
     <generalDescription>Some items are subject to completion of the main's research project.</generalDescription>
   </ResearchTabDef>
 
-  <ResearchTabDef>
+  <ResearchTabDef MayRequire="Ludeon.RimWorld.Odyssey">
     <defName>ART_ODYSSEY</defName>
     <label>Odyssey</label>
     <generalTitle>Odyssey research projects</generalTitle>
