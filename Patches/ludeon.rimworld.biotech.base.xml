@@ -1,144 +1,239 @@
 <Patch>
 
 	<!-- タブの移動 -->
-	<Operation Class="PatchOperationAdd">
-		<!-- メカノイド系じゃないBIOTECH研究の移動 -->
-		<xpath>//ResearchProjectDef[defName="ToxifierGenerator"]
-			| //ResearchProjectDef[defName="Xenogermination"]
-			| //ResearchProjectDef[defName="GeneProcessor"]
-			| //ResearchProjectDef[defName="Archogenetics"]
-			| //ResearchProjectDef[defName="Deathrest"]
-			| //ResearchProjectDef[defName="FertilityProcedures"]
-			| //ResearchProjectDef[defName="ToxGas"]
-			| //ResearchProjectDef[defName="ToxFiltration"]
-			| //ResearchProjectDef[defName="GrowthVats"]
-		</xpath>
-		<value>
-			<tab>ART_BIOTECH</tab>
-		</value>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Biotech</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<!-- メカノイド系じゃないBIOTECH研究の移動 -->
+			<xpath>//ResearchProjectDef[defName="ToxifierGenerator"]
+				| //ResearchProjectDef[defName="Xenogermination"]
+				| //ResearchProjectDef[defName="GeneProcessor"]
+				| //ResearchProjectDef[defName="Archogenetics"]
+				| //ResearchProjectDef[defName="Deathrest"]
+				| //ResearchProjectDef[defName="FertilityProcedures"]
+				| //ResearchProjectDef[defName="ToxGas"]
+				| //ResearchProjectDef[defName="ToxFiltration"]
+				| //ResearchProjectDef[defName="GrowthVats"]
+			</xpath>
+			<value>
+				<tab>ART_BIOTECH</tab>
+			</value>
+		</match>
 	</Operation>
 
 	<!-- 各研究のタブ内における座標修正 -->
 	<!-- memo. core 基準だと Xは1.0,Yは0.7 離す -->
 
 	<!-- メカノイド系が最上段にいるので、core系は2行目 (Y=0.70から) -->
-	<Operation Class="PatchOperationReplace">
-		<xpath>//ResearchProjectDef[defName="ToxifierGenerator"]/researchViewX</xpath>
-		<value>
-			<researchViewX>0.00</researchViewX>
-		</value>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Biotech</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>//ResearchProjectDef[defName="ToxifierGenerator"]/researchViewX</xpath>
+			<value>
+				<researchViewX>0.00</researchViewX>
+			</value>
+		</match>
 	</Operation>
-	<Operation Class="PatchOperationReplace">
-		<xpath>//ResearchProjectDef[defName="ToxifierGenerator"]/researchViewY</xpath>
-		<value>
-			<researchViewY>0.70</researchViewY>
-		</value>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Biotech</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>//ResearchProjectDef[defName="ToxifierGenerator"]/researchViewY</xpath>
+			<value>
+				<researchViewY>0.70</researchViewY>
+			</value>
+		</match>
 	</Operation>
 
 	<!-- 遺伝子系は3行目 -->
-	<Operation Class="PatchOperationReplace">
-		<xpath>//ResearchProjectDef[defName="Xenogermination"]/researchViewX</xpath>
-		<value>
-			<researchViewX>0.00</researchViewX>
-		</value>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Biotech</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>//ResearchProjectDef[defName="Xenogermination"]/researchViewX</xpath>
+			<value>
+				<researchViewX>0.00</researchViewX>
+			</value>
+		</match>
 	</Operation>
-	<Operation Class="PatchOperationReplace">
-		<xpath>//ResearchProjectDef[defName="Xenogermination"]/researchViewY</xpath>
-		<value>
-			<researchViewY>1.40</researchViewY>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationReplace">
-		<xpath>//ResearchProjectDef[defName="GeneProcessor"]/researchViewX</xpath>
-		<value>
-			<researchViewX>1.00</researchViewX>
-		</value>
-	</Operation>
-	<Operation Class="PatchOperationReplace">
-		<xpath>//ResearchProjectDef[defName="GeneProcessor"]/researchViewY</xpath>
-		<value>
-			<researchViewY>1.40</researchViewY>
-		</value>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Biotech</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>//ResearchProjectDef[defName="Xenogermination"]/researchViewY</xpath>
+			<value>
+				<researchViewY>1.40</researchViewY>
+			</value>
+		</match>
 	</Operation>
 
-	<Operation Class="PatchOperationReplace">
-		<xpath>//ResearchProjectDef[defName="Archogenetics"]/researchViewX</xpath>
-		<value>
-			<researchViewX>2.00</researchViewX>
-		</value>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Biotech</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>//ResearchProjectDef[defName="GeneProcessor"]/researchViewX</xpath>
+			<value>
+				<researchViewX>1.00</researchViewX>
+			</value>
+		</match>
 	</Operation>
-	<Operation Class="PatchOperationReplace">
-		<xpath>//ResearchProjectDef[defName="Archogenetics"]/researchViewY</xpath>
-		<value>
-			<researchViewY>1.40</researchViewY>
-		</value>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Biotech</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>//ResearchProjectDef[defName="GeneProcessor"]/researchViewY</xpath>
+			<value>
+				<researchViewY>1.40</researchViewY>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Biotech</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>//ResearchProjectDef[defName="Archogenetics"]/researchViewX</xpath>
+			<value>
+				<researchViewX>2.00</researchViewX>
+			</value>
+		</match>
+	</Operation>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Biotech</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>//ResearchProjectDef[defName="Archogenetics"]/researchViewY</xpath>
+			<value>
+				<researchViewY>1.40</researchViewY>
+			</value>
+		</match>
 	</Operation>
 
 	<!-- 毒系統を4行目に -->
-	<Operation Class="PatchOperationReplace">
-		<xpath>//ResearchProjectDef[defName="ToxGas"]/researchViewX</xpath>
-		<value>
-			<researchViewX>0.00</researchViewX>
-		</value>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Biotech</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>//ResearchProjectDef[defName="ToxGas"]/researchViewX</xpath>
+			<value>
+				<researchViewX>0.00</researchViewX>
+			</value>
+		</match>
 	</Operation>
-	<Operation Class="PatchOperationReplace">
-		<xpath>//ResearchProjectDef[defName="ToxGas"]/researchViewY</xpath>
-		<value>
-			<researchViewY>2.10</researchViewY>
-		</value>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Biotech</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>//ResearchProjectDef[defName="ToxGas"]/researchViewY</xpath>
+			<value>
+				<researchViewY>2.10</researchViewY>
+			</value>
+		</match>
 	</Operation>
 
-	<Operation Class="PatchOperationReplace">
-		<xpath>//ResearchProjectDef[defName="ToxFiltration"]/researchViewX</xpath>
-		<value>
-			<researchViewX>1.00</researchViewX>
-		</value>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Biotech</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>//ResearchProjectDef[defName="ToxFiltration"]/researchViewX</xpath>
+			<value>
+				<researchViewX>1.00</researchViewX>
+			</value>
+		</match>
 	</Operation>
-	<Operation Class="PatchOperationReplace">
-		<xpath>//ResearchProjectDef[defName="ToxFiltration"]/researchViewY</xpath>
-		<value>
-			<researchViewY>2.10</researchViewY>
-		</value>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Biotech</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>//ResearchProjectDef[defName="ToxFiltration"]/researchViewY</xpath>
+			<value>
+				<researchViewY>2.10</researchViewY>
+			</value>
+		</match>
 	</Operation>
 
 	<!-- あまりを5行目に -->
-	<Operation Class="PatchOperationReplace">
-		<xpath>//ResearchProjectDef[defName="Deathrest"]/researchViewX</xpath>
-		<value>
-			<researchViewX>0.00</researchViewX>
-		</value>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Biotech</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>//ResearchProjectDef[defName="Deathrest"]/researchViewX</xpath>
+			<value>
+				<researchViewX>0.00</researchViewX>
+			</value>
+		</match>
 	</Operation>
-	<Operation Class="PatchOperationReplace">
-		<xpath>//ResearchProjectDef[defName="Deathrest"]/researchViewY</xpath>
-		<value>
-			<researchViewY>2.80</researchViewY>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationReplace">
-		<xpath>//ResearchProjectDef[defName="FertilityProcedures"]/researchViewX</xpath>
-		<value>
-			<researchViewX>1.00</researchViewX>
-		</value>
-	</Operation>
-	<Operation Class="PatchOperationReplace">
-		<xpath>//ResearchProjectDef[defName="FertilityProcedures"]/researchViewY</xpath>
-		<value>
-			<researchViewY>2.80</researchViewY>
-		</value>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Biotech</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>//ResearchProjectDef[defName="Deathrest"]/researchViewY</xpath>
+			<value>
+				<researchViewY>2.80</researchViewY>
+			</value>
+		</match>
 	</Operation>
 
-	<Operation Class="PatchOperationReplace">
-		<xpath>//ResearchProjectDef[defName="GrowthVats"]/researchViewX</xpath>
-		<value>
-			<researchViewX>2.00</researchViewX>
-		</value>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Biotech</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>//ResearchProjectDef[defName="FertilityProcedures"]/researchViewX</xpath>
+			<value>
+				<researchViewX>1.00</researchViewX>
+			</value>
+		</match>
 	</Operation>
-	<Operation Class="PatchOperationReplace">
-		<xpath>//ResearchProjectDef[defName="GrowthVats"]/researchViewY</xpath>
-		<value>
-			<researchViewY>2.80</researchViewY>
-		</value>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Biotech</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>//ResearchProjectDef[defName="FertilityProcedures"]/researchViewY</xpath>
+			<value>
+				<researchViewY>2.80</researchViewY>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Biotech</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>//ResearchProjectDef[defName="GrowthVats"]/researchViewX</xpath>
+			<value>
+				<researchViewX>2.00</researchViewX>
+			</value>
+		</match>
+	</Operation>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Biotech</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>//ResearchProjectDef[defName="GrowthVats"]/researchViewY</xpath>
+			<value>
+				<researchViewY>2.80</researchViewY>
+			</value>
+		</match>
 	</Operation>
 </Patch>
